@@ -47,10 +47,14 @@ function displayInfo() { // a function to display employee's info
 
 function totalMonthly() { // a function to calculate the total monthly.
     let total = 0;
+    const maxSalary = 20000;
     for(let i=0; i<employeeInfo.length; i++) { // loop through array for 
         total = total + (employeeInfo[i].annualSalary/12); // Employee's annual salary divided by 12 months.
         $('.showTotalMonthly').text(`Total Monthly: $${total.toFixed(2)}`);
     } // for loop.
+    if(total > maxSalary) {
+        $('.showTotalMonthly').css('background-color', 'red');
+    } // end if
 } // end totalMonthly.
 
 
