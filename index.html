@@ -12,20 +12,21 @@
     <title>Jquery Salary Calculator</title>
 </head>
 <body>
-    <header class="jumbotron"><h1>Salary Calculator</h1></header>
+    <header class="jumbotron text-center"><h1>Salary Calculator</h1></header>
 
-    <div>
+    <div class="inputFields">
         <h2>Add Employee</h2>
         <input type="text" placeholder="First Name" id="firstName">
         <input type="text" placeholder="Last Name" id="lastName">
         <input type="text" placeholder="ID" id="idInfo">
         <input type="text" placeholder="Title" id="titleName">
         <input type="number" placeholder="Annual Salary" id="annualSalary">
-        <button id="addInfoButton" type="submit">Submit</button>
+        <button class="btn btn-info"id="addInfoButton" type="submit">Submit</button>
+        <button class="btn btn-warning" id="deleteButton">Delete by ID</button>
     </div>
     
     <div class="container formInfo">
-        <table id="tableInfo" class="table">
+        <table id="tableInfo" class="table table-bordered">
             <thead>
                 <tr>
                     <th>First Name</th>
@@ -39,9 +40,11 @@
                 <!--Employee's information will go here-->
             </tbody>
         </table>
-        <button id="deleteButton">Delete</button>
-        <p class="showTotalMonthly">Total Monthly:</p>
+        <h4 class="text-right showTotalMonthly">Total Monthly:</h4>
     </div>
+
+   
+
 
 
 
